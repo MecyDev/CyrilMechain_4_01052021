@@ -29,31 +29,15 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-/*function errorVisible(e) {
-  if (e === false) {
-    formData[0].setAttribute("data-error-visible", "true");
-    console.log(e);
-  } else {
-    formData[0].setAttribute("data-error-visible", "false");
-  }
-}*/
-
-/*document.querySelector("#first").addEventListener("submit", function (e) {
-  if (document.querySelector("#first").validity.valid === false) {
-    formData[0].setAttribute("data-error-visible", "true");
-  } else {
-    formData[0].setAttribute("data-error-visible", "false");
-  }
-});*/
-
-/*document.querySelector("#first").addEventListener("invalid", function (e) {
-  e.preventDefault();
-});*/
-
+//Validate function -
 function validate() {
-  const x = document.querySelectorAll("input");
+  //Select all inputs
+  const i = document.querySelectorAll("input");
 
-  x.forEach(function (e) {
+  //Check if inputs are valid or not with HTML5 Web API
+  //Change attribute "data-error-visible" for show the error message or not
+  //Exclude the checkbox2 because is not required for validate form
+  i.forEach(function (e) {
     if (e.id != "checkbox2") {
       if (e.validity.valid === false) {
         e.parentElement.setAttribute("data-error-visible", "true");
@@ -66,5 +50,7 @@ function validate() {
   /*modalbg.style.display = "block";
   document.querySelector("form").style.display = "none";
   console.log("OKOKOK");*/
+
+  //for keep form on screen when submit
   return false;
 }
