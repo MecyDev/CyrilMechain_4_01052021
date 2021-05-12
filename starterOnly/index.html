@@ -58,8 +58,13 @@
               action="index.html"
               method="get"
               onsubmit="return validate();"
+              novalidate
             >
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom."
+              >
                 <label for="first">Prénom</label><br />
                 <input
                   class="text-control"
@@ -70,7 +75,11 @@
                   required
                 /><br />
               </div>
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom."
+              >
                 <label for="last">Nom</label><br />
                 <input
                   class="text-control"
@@ -81,7 +90,11 @@
                   required
                 /><br />
               </div>
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Veuillez entrer un E-mail valide."
+              >
                 <label for="email">E-mail</label><br />
                 <input
                   class="text-control"
@@ -91,7 +104,11 @@
                   required
                 /><br />
               </div>
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Vous devez entrer votre date de naissance."
+              >
                 <label for="birthdate">Date de naissance</label><br />
                 <input
                   class="text-control"
@@ -101,7 +118,11 @@
                   required
                 /><br />
               </div>
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Veuillez indiquer le nombre de tournois auxquels vous avez participé."
+              >
                 <label for="quantity"
                   >À combien de tournois GameOn avez-vous déjà participé
                   ?</label
@@ -117,7 +138,11 @@
                 />
               </div>
               <p class="text-label">Quelles villes ?</p>
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="fasle"
+                data-error="Vous devez choisir une ville."
+              >
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -187,7 +212,11 @@
                 >
               </div>
 
-              <div class="formData">
+              <div
+                class="formData"
+                data-error-visible="false"
+                data-error="Vous devez vérifier que vous acceptez les termes et conditions."
+              >
                 <input
                   class="checkbox-input"
                   type="checkbox"
