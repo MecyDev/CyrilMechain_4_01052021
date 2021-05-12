@@ -11,17 +11,19 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const modalX = document.querySelectorAll(".close");
+const modalClose = document.querySelectorAll(".close-event");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// Close modal event
-modalX.forEach((close) => close.addEventListener("click", closeModal));
+// Close modal event - with X or button Close
+modalClose.forEach((btn) => btn.addEventListener("click", closeModal));
 
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  document.querySelector("form").style.display = "block";
+  document.querySelector(".validate").style.display = "none";
 }
 
 //close the modal
@@ -31,25 +33,32 @@ function closeModal() {
 
 //Validate function -
 function validate() {
-  //Select all inputs
-  const i = document.querySelectorAll("input");
+  //Variables for select all inputs and form
+  const input = document.querySelectorAll("input");
+  const form = document.querySelector("form");
 
-  //Check if inputs are valid or not with HTML5 Web API
-  //Change attribute "data-error-visible" for show the error message or not
-  //Exclude the checkbox2 because is not required for validate form
-  i.forEach(function (e) {
-    if (e.id != "checkbox2") {
-      if (e.validity.valid === false) {
-        e.parentElement.setAttribute("data-error-visible", "true");
-      } else {
-        e.parentElement.setAttribute("data-error-visible", "false");
+  //Check for form validity
+  if (form.checkValidity() === false) {
+    //Check if inputs are valid or not with HTML5 Web API
+    //Change attribute "data-error-visible" for show the error message or not
+    //Exclude the checkbox2 because is not required for validate form
+    input.forEach(function (e) {
+      if (e.id != "checkbox2") {
+        if (e.validity.valid === false) {
+          e.parentElement.setAttribute("data-error-visible", "true");
+        } else {
+          e.parentElement.setAttribute("data-error-visible", "false");
+        }
       }
-    }
-  });
-
-  /*modalbg.style.display = "block";
-  document.querySelector("form").style.display = "none";
-  console.log("OKOKOK");*/
+    });
+  } else {
+    //clear form, clear errors messages and show message validation
+    document.querySelector(".validate").style.display = "flex";
+    form.reset();
+    input.forEach(function (e) {
+      e.parentElement.setAttribute("data-error-visible", "false");
+    });
+  }
 
   //for keep form on screen when submit
   return false;

@@ -33,7 +33,7 @@ img {
 }
 
 form {
-  display: visible;
+  display: block;
 }
 
 .topnav {
@@ -144,6 +144,24 @@ main {
 
 .modal-btn:hover {
   background: #3876ac;
+}
+
+.validate {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #232323;
+}
+
+.validate__mess {
+  width: 309px;
+  height: 153px;
+  margin: auto;
+  text-align: center;
 }
 
 .footer {
@@ -334,6 +352,7 @@ input[data-error]::after {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  z-index: 2;
 }
 
 .close:before,
@@ -365,6 +384,10 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+
+.btn-close {
+  margin-bottom: 5%;
 }
 
 /* custom select styles */
