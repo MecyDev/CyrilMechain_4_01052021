@@ -54,7 +54,11 @@ function validate() {
   } else {
     //clear form, clear errors messages and show message validation
     document.querySelector(".validate").style.display = "flex";
+
+    // ********* Here, input code for save form data to destination ********* //
+
     form.reset();
+
     input.forEach(function (e) {
       e.parentElement.setAttribute("data-error-visible", "false");
     });
