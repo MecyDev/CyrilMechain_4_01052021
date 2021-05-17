@@ -75,7 +75,12 @@ form {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 540px) {
+  .header-logo {
+    width: 103px;
+    height: 19px;
+  }
+
   .topnav a {
     display: none;
   }
@@ -83,6 +88,7 @@ form {
   .topnav a.icon {
     float: right;
     display: block;
+    color: #fe142f;
   }
 }
 
@@ -102,9 +108,7 @@ form {
     display: block;
     text-align: left;
   }
-}
 
-@media screen and (max-width: 540px) {
   .topnav a {
     display: none;
   }
@@ -112,7 +116,6 @@ form {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 }
 
@@ -464,6 +467,7 @@ input[data-error]::after {
 }
 
 .hero-section {
+  width: 100%;
   min-height: 93vh;
   border-radius: 10px;
   display: grid;
@@ -505,7 +509,7 @@ input[data-error]::after {
 }
 
 .hero-text {
-  width: 146%;
+  width: 100%;
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
