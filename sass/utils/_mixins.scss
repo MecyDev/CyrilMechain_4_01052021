@@ -6,3 +6,9 @@
   width: 3px;
   background-color: white;
 }
+
+@mixin medium {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    @content;
+  }
+}

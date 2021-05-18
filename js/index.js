@@ -13,6 +13,13 @@ menu.addEventListener("click", function () {
     nav.className = "header__nav";
   }
 });
+
+window.addEventListener("resize", function () {
+  if (window.matchMedia("(min-width: 1200px)").matches) {
+    nav.className = "header__nav";
+  }
+});
+
 // launch modal event
 modalBtn.addEventListener("click", launchModal);
 
