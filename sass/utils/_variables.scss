@@ -11,11 +11,11 @@ $color-error: #ff4e60;
 /*background color*/
 
 //animation variable
-$modal-duration: 0.8s;
+$modal-anim-duration: 0.8s;
 
 /*breakpoints*/
 $breakpoints: (
   small: 540px,
-  medium: 768px,
+  medium: 1200px,
   large: 1300px,
 );

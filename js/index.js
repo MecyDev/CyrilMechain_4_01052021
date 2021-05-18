@@ -1,21 +1,20 @@
+// DOM Elements
+const modalbg = document.querySelector(".modal");
+const modalBtn = document.querySelector("#openModal");
+const formData = document.querySelectorAll(".formData");
+const modalClose = document.querySelectorAll(".close-event");
+const menu = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 
-nav.addEventListener("click", function () {
+menu.addEventListener("click", function () {
   if (nav.className === "header__nav") {
     nav.className += " header__nav--mobile";
   } else {
     nav.className = "header__nav";
   }
 });
-
-// DOM Elements
-const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const modalClose = document.querySelectorAll(".close-event");
-
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+modalBtn.addEventListener("click", launchModal);
 
 // Close modal event - with X or button Close
 modalClose.forEach((btn) => btn.addEventListener("click", closeModal));

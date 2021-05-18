@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap");
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./utils/anim";
 @import "./vendors/minireset";
 @import "./base/base";
 @import "./layouts/header";
-@import "./components/nav";
+@import "./layouts/footer";
+@import "./components/container";
+@import "./components/modal";
+@import "./components/form";
+@import "./components/close";
+@import "./components/btn";
+@import "./pages/hero";
