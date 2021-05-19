@@ -1,18 +1,32 @@
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
-  min-height: 90vh;
+
+  margin-top: 2vw;
 
   &__slogan {
-    font-size: 4.8rem;
-    line-height: 62px;
+    font-size: 11.59vw;
+    line-height: 14.98vw;
+    @include medium {
+      font-size: 9.6rem;
+      line-height: 12.5rem;
+    }
+    margin-bottom: 3vw;
   }
 
   &__sub-head {
-    font-size: 1.3rem;
-    line-height: 17px;
+    font-size: 3.14vw;
+    line-height: 4.11vw;
+    @include medium {
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+    }
+    margin-bottom: 3vw;
+  }
+
+  &__imgCont {
+    margin-bottom: 3vw;
   }
 
   &__img {

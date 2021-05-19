@@ -1,5 +1,4 @@
 footer {
-  margin-top: 29px;
   margin-bottom: 15px;
 
   p {
@@ -8,5 +7,8 @@ footer {
     font-weight: 500;
     color: $color-primary;
     font-size: 1rem;
+    @include medium {
+      font-size: 1.5rem;
+    }
   }
 }

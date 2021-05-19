@@ -15,6 +15,9 @@
 
     a {
       display: none;
+      @include large {
+        display: inline;
+      }
       padding: 12px 12px;
       margin: 5px;
       font-family: $font-second;
@@ -42,12 +45,12 @@
 
     &--mobile {
       display: block;
-      @include medium {
+      @include large {
         display: none;
       }
       position: absolute;
       right: 7%;
-      top: 7.5%;
+      top: 8.7%;
 
       a {
         display: block;
@@ -70,7 +73,7 @@
 
   &__icon {
     display: block;
-    @include medium {
+    @include large {
       display: none;
     }
     color: $color-primary;
