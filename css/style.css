@@ -230,12 +230,6 @@ label {
   margin-bottom: 11px;
 }
 
-input {
-  padding: 8px;
-  border: 0.8px solid #ccc;
-  outline: none;
-}
-
 .text-control {
   margin: 0;
   padding: 8px;

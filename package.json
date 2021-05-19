@@ -1,0 +1,24 @@
+{
+  "name": "cyrilmechain_4_01052021",
+  "version": "1.0.0",
+  "description": "1. Forkez ce repo ; 2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ; 3. Il n'y a aucune dépendance ; 4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MecyDev/CyrilMechain_4_01052021.git"
+  },
+  "author": "MecyDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MecyDev/CyrilMechain_4_01052021/issues"
+  },
+  "homepage": "https://github.com/MecyDev/CyrilMechain_4_01052021#readme",
+  "dependencies": {
+    "minireset.css": "^0.0.7"
+  },
+  "browserslist": "last 3 versions"
+}

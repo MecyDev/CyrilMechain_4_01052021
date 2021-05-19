@@ -1,0 +1,21 @@
+/*Font variables*/
+$font-default: "DM Sans", Arial, Helvetica, sans-serif;
+$font-second: "Roboto", sans-serif;
+
+/*theme color*/
+$color-primary: #fe142f;
+$color-bg-modal: #232323;
+$color-check: #279e7a;
+$color-error: #ff4e60;
+
+/*background color*/
+
+//animation variable
+$modal-anim-duration: 0.8s;
+
+/*breakpoints*/
+$breakpoints: (
+  medium: 800px,
+  large: 1200px,
+  xLarge: 1440px,
+);

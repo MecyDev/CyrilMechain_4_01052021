@@ -1,0 +1,30 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+
+  &__content {
+    width: 100%;
+    max-width: 536px;
+    animation-name: modalOpen;
+    animation-duration: $modal-anim-duration;
+    background: $color-bg-modal;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    padding-top: 10px;
+    text-align: justify;
+    margin: 0 auto;
+  }
+
+  &__body {
+    padding: 15px 8%;
+    margin: 15px auto;
+  }
+}
