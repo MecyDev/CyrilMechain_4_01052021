@@ -14,10 +14,20 @@
   align-self: center;
   outline: inherit;
   cursor: pointer;
-  margin-bottom: 29px;
 
   &:hover {
     background: #3876ac;
+  }
+
+  &--launch {
+    @include large {
+      position: absolute;
+      bottom: 8%;
+      left: 5%;
+    }
+    @include xLarge {
+      bottom: 10.65%;
+    }
   }
 
   &__container {
@@ -28,6 +38,7 @@
     display: flex;
     margin: auto;
     justify-content: center;
+    margin-top: 15px;
   }
 }
 

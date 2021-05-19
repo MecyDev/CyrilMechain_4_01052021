@@ -3,28 +3,56 @@ const modalbg = document.querySelector(".modal");
 const modalBtn = document.querySelector("#openModal");
 const formData = document.querySelectorAll(".formData");
 const modalClose = document.querySelectorAll(".close-event");
+const links = document.querySelectorAll("nav a");
 const menu = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 
-menu.addEventListener("click", function () {
-  if (nav.className === "header__nav") {
-    nav.className += " header__nav--mobile";
-  } else {
-    nav.className = "header__nav";
-  }
-});
+//Listen windows size for delete mobile menu if open
+window.addEventListener(
+  "resize",
+  function () {
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+      nav.className = "header__nav";
+    }
+  },
+  false
+);
 
-window.addEventListener("resize", function () {
-  if (window.matchMedia("(min-width: 1200px)").matches) {
-    nav.className = "header__nav";
-  }
-});
+//Open menu on mobile targuet
+menu.addEventListener(
+  "click",
+  function () {
+    if (nav.className === "header__nav") {
+      nav.className += " header__nav--mobile";
+    } else {
+      nav.className = "header__nav";
+    }
+  },
+  false
+);
+
+//Set menu link to position active
+links.forEach(
+  (link) =>
+    link.addEventListener("click", function () {
+      let e = document.querySelector(".header__nav__active");
+
+      if (e !== null) {
+        e.classList.remove("header__nav__active");
+      }
+
+      link.setAttribute("class", "header__nav__active");
+    }),
+  false
+);
+
+//
 
 // launch modal event
-modalBtn.addEventListener("click", launchModal);
+modalBtn.addEventListener("click", launchModal, false);
 
 // Close modal event - with X or button Close
-modalClose.forEach((btn) => btn.addEventListener("click", closeModal));
+modalClose.forEach((btn) => btn.addEventListener("click", closeModal, false));
 
 // launch modal form
 function launchModal() {

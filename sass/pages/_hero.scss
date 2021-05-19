@@ -3,34 +3,88 @@
   flex-direction: column;
   width: 100%;
   margin-top: 2vw;
+  margin-bottom: 29px;
+
+  @include large {
+    display: block;
+    position: relative;
+    width: 86.04vw;
+    max-width: 1239px;
+    height: 45.63vw;
+    max-height: 657px;
+    color: white;
+    background-color: $color-bg-modal;
+    border-radius: 8px;
+    margin-top: 85px;
+  }
 
   &__slogan {
     font-size: 11.59vw;
     line-height: 14.98vw;
+    margin-bottom: 3vw;
     @include medium {
       font-size: 9.6rem;
       line-height: 12.5rem;
     }
-    margin-bottom: 3vw;
+    @include large {
+      position: absolute;
+      top: 8.07%;
+      left: 5%;
+      z-index: 1;
+      width: 66.46vw;
+      min-width: 850px;
+      max-width: 957px;
+      height: 14.93vw;
+      max-height: 215px;
+      margin-bottom: 0;
+    }
   }
 
   &__sub-head {
     font-size: 3.14vw;
     line-height: 4.11vw;
+    margin-bottom: 3vw;
     @include medium {
       font-size: 2.4rem;
       line-height: 3.1rem;
     }
-    margin-bottom: 3vw;
+    @include large {
+      position: absolute;
+      top: 55.71%;
+      left: 5%;
+      width: 29.86vw;
+      max-width: 430px;
+      height: 93px;
+      margin-bottom: 0;
+    }
   }
 
   &__imgCont {
     margin-bottom: 3vw;
+    @include large {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50.69vw;
+      max-width: 730px;
+      height: 45.63vw;
+      max-height: 657px;
+      margin-bottom: 0;
+    }
   }
 
   &__img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    @include large {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50.69vw;
+      max-width: 730px;
+      height: 45.63vw;
+      max-height: 657px;
+    }
   }
 }
