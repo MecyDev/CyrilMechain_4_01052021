@@ -123,6 +123,9 @@
 
 .validate__mess {
   width: 309px;
+  @include large {
+    width: 450px;
+  }
   height: 153px;
   margin: auto;
   font-size: 3.6rem;
