@@ -1,11 +1,11 @@
 // DOM Elements
 const modalbg = document.querySelector(".modal");
 const modalBtn = document.querySelector("#openModal");
-const formData = document.querySelectorAll(".formData");
 const modalClose = document.querySelectorAll(".close-event");
 const links = document.querySelectorAll("nav a");
 const menu = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
+const inputs = document.querySelectorAll("input");
 
 //Listen windows size for delete mobile menu if open
 window.addEventListener(
@@ -46,8 +46,6 @@ links.forEach(
   false
 );
 
-//
-
 // launch modal event
 modalBtn.addEventListener("click", launchModal, false);
 
@@ -66,10 +64,22 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-//Validate function -
+//Check form inputs validity when user type in
+inputs.forEach(
+  (i) =>
+    i.addEventListener("input", function () {
+      if (i.validity.valid === false) {
+        i.parentElement.setAttribute("data-error-visible", "true");
+      } else {
+        i.parentElement.setAttribute("data-error-visible", "false");
+      }
+    }),
+  false
+);
+
+//Validate the form when click on button submit
 function validate() {
   //Variables for select all inputs and form
-  const input = document.querySelectorAll("input");
   const form = document.querySelector("form");
 
   //Check for form validity
@@ -77,7 +87,9 @@ function validate() {
     //Check if inputs are valid or not with HTML5 Web API
     //Change attribute "data-error-visible" for show the error message or not
     //Exclude the checkbox2 because is not required for validate form
-    input.forEach(function (e) {
+    document.querySelector(".error").style.display = "block"; //show genral error message
+
+    inputs.forEach(function (e) {
       if (e.id != "checkbox2") {
         if (e.validity.valid === false) {
           e.parentElement.setAttribute("data-error-visible", "true");
@@ -94,8 +106,9 @@ function validate() {
 
     form.reset();
 
-    input.forEach(function (e) {
+    inputs.forEach(function (e) {
       e.parentElement.setAttribute("data-error-visible", "false");
+      document.querySelector(".error").style.display = "none";
     });
   }
 
